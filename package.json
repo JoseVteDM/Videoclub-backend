@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/JoseVteDM/Videoclub-backend/issues"
   },
-  "homepage": "https://github.com/JoseVteDM/Videoclub-backend#readme"
+  "homepage": "https://github.com/JoseVteDM/Videoclub-backend#readme",
+  "dependencies": {
+    "mongodb": "^3.6.4",
+    "status": "0.0.13",
+    "sudo": "^1.0.3",
+    "systemctl": "^0.2.2"
+  }
 }
