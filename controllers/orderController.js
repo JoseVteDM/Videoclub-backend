@@ -1,33 +1,53 @@
-const Storage = require('../storage');
+const User = require('../models/user');
 
-class order {
 
-    storage;
+class Customer {
 
-    constructor() {
-        this.storage = new Storage();
+    constructor(){
+
     }
 
-    async indexAll() {
-        return this.storage.get();
-    }
+    //GET - Return all Users in the DB
 
-    async store(order) {
-        return this.storage.set(order);
-    }
+    async findAllUsers(users){
+        return User.find(users);
+    };
 
-    async update(id, order) {    
-        return this.storage.updateById(id,order);
-    }
+    //GET - Return a User with specified ID
 
-    async destroy(id) {
-        return this.storage.deleteById(id);
-    }
+    async findById(id) {
+        return User.findById(id);
+    };
+
+     //GET - Return a Film with specified Title
+
+     async findByUserName({query}) {
+        if(query == undefined)
+        return []
+        else
+        return User.find({"user_name": query});
+    };
 
 
 
-}
+    //POST - SignIn a new User in the DB
 
+    async signInUser(profile){
+       return User.create(profile)
+    };
 
-let orderController = new order();
-module.exports = orderController;
+    //PUT - Update a User Profil already existing
+
+    async updateProfile(id,user){
+        return User.findByIdAndUpdate(id,user,{new: true})
+    };
+
+    //DELETE - Delete a User with specified ID
+
+    async deleteUser(id) {
+        return User.findByIdAndRemove(id)
+    };
+};
+
+let userController = new Customer();
+module.exports = userController;

@@ -84,7 +84,7 @@ logger('salvando una instancia de cat');
 kitty.save()
 
 .then (()  => logger('instancia de cat salvada'));
-.catch( (error) => console.log(error);
+.catch (error) => console.log(error);
 
 
 
