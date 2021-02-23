@@ -73,13 +73,18 @@ logger('creando una instancia de cat')
 const kitty = new Cat({name:'Zildjian'});
 logger('instancia de cat creada')
 
+Country.insertMany(countryCollection)
+import countries from ('./countryCollection.json');
+const Country = mon
+
+const country = mongoose.node('country',)
 
 
 logger('salvando una instancia de cat');
 kitty.save()
+
 .then (()  => logger('instancia de cat salvada'));
 .catch( (error) => console.log(error);
-
 
 
 

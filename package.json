@@ -1,10 +1,11 @@
 {
-  "name": "videoclub-backend-1",
+  "name": "videoclub-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "fixtures" "node fixtures.js",
     "start": "app.js"
   },
   "repository": {
