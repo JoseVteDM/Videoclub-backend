@@ -1,6 +1,13 @@
 const router = require('express').Router();
 const userController = require('../controllers/userController')
 
+
+
+/**
+ * Input(req, res)
+ * description:
+ */
+
 // API routes
 
 //GET - Return all Users in the DB
@@ -86,3 +93,17 @@ router.delete('/remove/:id', async (req, res) => {
 });
 
 module.exports = router;
+
+/*async rentMovie(userId,movieId,range) {
+    Rental.create({
+        customerId: userId,
+        movieId: movieId,
+        dateIni: range[0],
+        dateEnd:  range[1]
+    })
+}
+async indexAllRentalByCustomer(userId) {
+    returnRental.find({
+        customerId: userId,
+    })
+}*/
